@@ -50,6 +50,9 @@ public class Connection_Screen extends AppCompatActivity {
     private View.OnClickListener btnClick = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
+
+            Modele unModele = new Modele();
+
             i = new Intent(getApplicationContext(), Main_Menu.class);
             startActivity(i);
         }

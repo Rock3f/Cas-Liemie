@@ -23,5 +23,4 @@
             android:label="@string/title_activity_main__menu"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
-
 </manifest>
