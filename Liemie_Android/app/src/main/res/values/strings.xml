@@ -2,4 +2,6 @@
     <string name="app_name">PPE 4 - Kaliemie</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_main__menu">Main_Menu</string>
+    <string name="title_activity_calendrier_soin">CalendrierSoin</string>
+    <string name="title_activity_geolocalisation">Geolocalisation</string>
 </resources>
