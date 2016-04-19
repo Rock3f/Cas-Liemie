@@ -32,33 +32,11 @@ public class Connection_Screen extends AppCompatActivity {
         Button btnConnect = (Button) findViewById(R.id.btnConnect);
         btnConnect.setOnClickListener(btnClick);
 
-        if(////////base vide//////////)
+        if(false)
         {
             mThreadCon = new Async (Connection_Screen.this).execute(URL_RecupererInfirmiereParLogin);
         }
 
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_connection__screen, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 
     private View.OnClickListener btnClick = new View.OnClickListener() {
@@ -72,24 +50,5 @@ public class Connection_Screen extends AppCompatActivity {
         }
     };
 
-    public void retourAsync(StringBuilder s)
-    {
-        try {
-            JSONArray jsonArr = new JSONArray(s);           //On créer un tableau contenant le tableau json s
 
-            while (i < jsonArr.length())                    //On va parcouirr chaque cellule de ce tableau
-            {
-                JSONObject jsonObj = jsonArr.getJSONObject(i);      //Pour y récupérer tous les objets
-        Infirmiere InfirmiereConnectee = new Infirmiere(jsonObj.getString("ID",
-                jsonObj.getString("ID",
-                jsonObj.getString("ID",
-
-                        /////// ICIIIIIIIIIIIIIIIIIIIIIIIIIIII
-                )
-            }
-            }
-            catch (Exception e) {
-                Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
-            }
-    }
 }

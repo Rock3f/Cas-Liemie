@@ -39,7 +39,7 @@ public class Async extends AsyncTask<String, String, Boolean> {
 //pour exemple on appelle une méthode de l'appelant qui va gérer la fin ok du thread
                 if (classActivityAppelante.contains("Connection_Screen"))
                 {
-                    ((Connection_Screen) activityAppelante.get()).retourAsync (stringBuilder);
+
                 }
             }
             else

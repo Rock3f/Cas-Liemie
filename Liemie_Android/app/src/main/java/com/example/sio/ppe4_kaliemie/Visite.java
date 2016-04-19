@@ -6,16 +6,16 @@ import java.util.Date;
 public class Visite {
 
     private String IDVISITE;
-    private String IDPATIENT;
-    private String IDINF;
+    private Patient PATIENT;
+    private Infirmiere INFIRMIERE;
     private Date DATEVISITE;
     private Date dateMaj;
 
 
-    public Visite(String idvisite, String idpatient, String idinf, Date datemaj, Date datevisite) {
+    public Visite(String idvisite, Patient patient, Infirmiere inf, Date datemaj, Date datevisite) {
         this.IDVISITE = idvisite;
-        this.IDPATIENT = idpatient;
-        this.IDINF = idinf;
+        this.PATIENT = patient;
+        this.INFIRMIERE = inf;
         this.dateMaj = datemaj;
         this.DATEVISITE = datevisite;
     }
@@ -24,12 +24,12 @@ public class Visite {
         return this.IDVISITE;
     }
 
-    public String getIDPATIENT() {
-        return this.IDPATIENT;
+    public Patient getPATIENT() {
+        return this.PATIENT;
     }
 
-    public String getIDINF() {
-        return this.IDINF;
+    public Infirmiere getINF() {
+        return this.INFIRMIERE;
     }
 
     public Date getDATEVISITE() {
@@ -44,12 +44,12 @@ public class Visite {
         this.IDVISITE = idvisite;
     }
 
-    public void setIDPATIENT(String idpatient) {
-        this.IDPATIENT = idpatient;
+    public void setPATIENT(Patient patient) {
+        this.PATIENT = patient;
     }
 
-    public void setIDINF(String idinf) {
-        this.IDINF = idinf;
+    public void setINF(Infirmiere inf) {
+        this.INFIRMIERE = inf;
     }
 
     public void setDATEVISITE(Date datevisite) {
