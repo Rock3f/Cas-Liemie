@@ -41,18 +41,17 @@ public class CalendrierSoin extends AppCompatActivity {
                 LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
 
         for (Visite uneVisite:lesVisites) {
-            TextView label = new TextView(this);
-            label.setText("Visite " + uneVisite.getIDVISITE());
-            TextView label1 = new TextView(this);
-            label.setText("Heure du RDV : " + uneVisite.getDATEVISITE().getTime());
-            TextView label2 = new TextView(this);
-            label.setText("Patient : " + uneVisite.getPATIENT().GetNOM() + " " + uneVisite.getPATIENT().GetPRENOM());
+            String libelle;
+            String visite = "Visite " + uneVisite.getIDVISITE();
+            String hours ;
+            if(uneVisite.getDATEVISITE().getMinutes()== 0)
+                hours = "Heure du RDV : " + uneVisite.getDATEVISITE().getHours() + "h" + 00;
+            else
+                hours = "Heure du RDV : " + uneVisite.getDATEVISITE().getHours() + "h" + uneVisite.getDATEVISITE().getMinutes();
 
-            ll.addView(label, layoutParams);
-            ll.addView(label1, layoutParams);
-            ll.addView(label2, layoutParams);
-
+            String patient = "Patient : " + uneVisite.getPATIENT().GetNOM() + " " + uneVisite.getPATIENT().GetPRENOM();
+            libelle = visite + "\n" + hours + "\n" + patient;
         }
-        setContentView(ll);
+
     }
 }
